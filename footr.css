@@ -1,0 +1,168 @@
+/* Global styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: Arial, sans-serif;
+line-height: 1.6;
+background-color: #000;
+color: #fff;
+}
+
+a {
+color: #fff;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+a:hover {
+color: #ccc;
+}
+
+ul {
+list-style: none;
+}
+
+/* Main footer */
+.footer {
+max-width: 1200px;
+margin: 0 auto;
+padding: 40px 15px;
+}
+
+.footer-main {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+margin-bottom: 40px;
+}
+
+.footer-column h3 {
+font-size: 18px;
+font-weight: normal;
+margin-bottom: 20px;
+color: #ccc;
+}
+
+.footer-column ul li {
+margin-bottom: 15px;
+}
+
+/* Blog section */
+.blog-posts {
+margin-top: 10px;
+}
+
+.blog-post {
+margin-bottom: 20px;
+}
+
+/* Search bar */
+.search-container {
+display: flex;
+justify-content: center;
+margin: 40px 0;
+}
+
+.search-bar {
+display: flex;
+max-width: 300px;
+width: 100%;
+border: 1px solid #444;
+border-radius: 4px;
+overflow: hidden;
+}
+
+.search-bar input {
+flex-grow: 1;
+padding: 8px 12px;
+border: none;
+background-color: transparent;
+color: #fff;
+}
+
+.search-bar button {
+background: transparent;
+border: none;
+padding: 8px 12px;
+color: #fff;
+cursor: pointer;
+}
+
+/* Social and app links */
+.footer-social-apps {
+display: grid;
+grid-template-columns: 2fr 1fr;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.social-icons {
+display: flex;
+justify-content: flex-end;
+gap: 15px;
+}
+
+.social-icons a {
+font-size: 20px;
+}
+
+.app-links {
+display: flex;
+justify-content: flex-end;
+gap: 10px;
+}
+
+.app-links img {
+height: 40px;
+}
+
+/* Bottom footer */
+.footer-bottom {
+display: grid;
+grid-template-columns: 1fr auto;
+align-items: center;
+padding-top: 20px;
+border-top: 1px solid #333;
+}
+
+.footer-legal {
+display: flex;
+gap: 20px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 900px) {
+.footer-main {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-social-apps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.social-icons, .app-links {
+    justify-content: center;
+}
+}
+
+@media (max-width: 576px) {
+.footer-main {
+    grid-template-columns: 1fr;
+}
+
+.footer-bottom {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-legal {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}

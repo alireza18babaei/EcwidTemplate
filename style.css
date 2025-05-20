@@ -1,0 +1,584 @@
+/* qustion 1: shrinkage and dformation of the button */ 
+/* gustion 2 */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+:root {
+    /* colers */
+    --green: #06a666;
+    --lightgreen: #84f3b7;
+    --lightred: #ffc699;
+    --blue: #496efd;
+    --yellow: #fae054;
+
+
+    /* transitions */
+    --transition1: all ease .3s;
+}
+
+
+h1,h2,h3,h4,h5,h6,p{
+    text-wrap: pretty;
+    overflow-wrap: break-word;
+}
+
+h1{
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+h2{
+    font-size: clamp(1.3rem, 4vw, 1.9rem);
+}
+h3{
+    font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+h5,p{
+    font-size: clamp(0.7rem,2vw,1rem);
+    font-weight: lighter;
+}
+
+h6{
+    font-size: clamp(.6rem,2vw,.75rem);
+    font-weight: lighter;
+}
+
+a{
+    font-size: .9rem;
+}
+
+button{
+    font-size: clamp(.6rem, 2vw, .9rem);
+    cursor: pointer;
+    transition: background-color ease .2s;
+}
+
+
+
+section:not(:first-of-type) button{
+    padding: .4em 3em;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    margin-bottom: 50px;
+}
+
+header div{
+    display: flex;
+    align-items: center;
+}
+/* qustion 1 */
+header a {
+    padding: .6em;  /* .7em .8em */
+    display: none;
+}a:hover{
+    text-decoration: underline;
+}
+header img {
+    height: clamp(50px, 10vw, 80px);
+}
+
+header button:nth-of-type(1){
+    padding: .4em;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+}header button:nth-of-type(1):hover {
+    background-color: goldenrod ;
+}
+
+header i {
+    font-size: 1.2rem;
+}
+header button:nth-of-type(2){
+    cursor: pointer;
+    padding: .4em;
+    border: none;
+    background: none;
+    margin-left: 15px;
+}
+
+
+
+
+section {
+    margin-bottom: 15vh;
+}
+/* start selling online */
+main{
+    padding: 0 min(10%, 50px);
+    width: min(100%, 1300px);
+    margin: auto;
+}
+
+
+
+section:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+
+section:nth-of-type(1)>div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-of-type(1)>div>div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+section:nth-of-type(1)>div>div>div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+section:nth-of-type(1) div div img {
+    height: 20px;
+}
+
+section:nth-of-type(1) button {
+    border: none;
+    padding: .8em 2.5em;
+    background: var(--green);
+    border: 1px solid black;
+    border-radius: 15px;
+}section:nth-of-type(1) button:hover {
+    background-color: white ;
+    box-shadow: 1px 1px 2px #0000005b;
+    color: black ;
+}
+
+section:nth-of-type(1)> img{
+    width: 100%;
+    max-width: 500px;
+}
+
+
+/* Sell anywhere / Grow faster / Manage simply  */
+section:not(:first-of-type) > div:first-of-type p{
+    margin: 15px 0;
+}
+section:not(:first-of-type) > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+section:not(:first-of-type) > blockquote{
+    position: relative;
+    height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15vh;
+    border: 2px solid black;
+    padding: 5vh 4% 3vh 8%;
+    border-radius: 35px;
+}
+section:not(:first-of-type) blockquote > img {
+    position: absolute;
+}
+
+section:nth-of-type(2) > blockquote > div,
+section:nth-of-type(3) > blockquote > div,
+section:nth-of-type(4) > blockquote > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+section:not(:first-of-type) > blockquote div a img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border: 1px solid #0000006c;
+    border-radius: 50%;
+}
+
+section:not(:first-of-type) > blockquote div:nth-of-type(1) a:nth-of-type(2){
+    font-weight: bolder;
+}
+
+blockquote span {
+    margin-left: 10px;
+}
+
+/* Sell anywhere  */
+section:nth-of-type(2) > div:first-of-type button{
+    background: var(--lightred);
+}section:nth-of-type(2) > div:first-of-type button:hover {
+    background-color: white ;
+    box-shadow: 1px 1px 2px #0000005b;
+    color: black ;
+}
+section:nth-of-type(2) > blockquote{
+    background-color: var(--lightred);
+}
+section:nth-of-type(2) blockquote > img {
+    right: -14px;
+    top: -100px;
+    width: 170px;
+}
+
+
+/* Grow faster */
+section:nth-of-type(3) > div:first-of-type button{
+    background: var(--lightgreen);
+}section:nth-of-type(3) > div:first-of-type button:hover {
+    background-color: white ;
+    box-shadow: 1px 1px 2px #0000005b;
+    color: black ;
+}
+section:nth-of-type(3) > blockquote{
+    background-color: var(--lightgreen);
+}
+section:nth-of-type(3) blockquote > img {
+    left: -15px;
+    top: -120px;
+    width: 170px;
+}
+
+
+/* Manage simply */
+section:nth-of-type(4) > div:first-of-type button{
+    background: var(--blue);
+}section:nth-of-type(4) > div:first-of-type button:hover {
+    background-color: white ;
+    box-shadow: 1px 1px 2px #0000005b;
+    color: black ;
+}
+section:nth-of-type(4) > blockquote{
+    background-color: var(--blue);
+    color: white;
+}
+section:nth-of-type(4) blockquote > img {
+    right: 2px;
+    top: -130px;
+    width: 170px;
+}
+
+
+/* Sell around the world */
+section:nth-of-type(5) {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.605), rgba(255, 255, 255, 0.633)), url('pictures/map.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 5%;
+}
+section:nth-of-type(5) div:nth-of-type(2) > div {
+    width: 27%;
+}
+
+
+/* features */
+section:nth-of-type(6) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+section:nth-of-type(6) > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+section:nth-of-type(6) img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+/* online store */
+section:nth-of-type(7) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    border: 1px solid;
+    border-radius: 40px;
+    padding: 5%;
+}
+section:nth-of-type(7) div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+section:nth-of-type(7) button {
+    background-color: var(--yellow);
+}section:nth-of-type(7) button:hover{
+    background-color: white;
+    box-shadow: 1px 1px 2px #0000005b;
+}
+
+
+/* Footer */
+footer {
+    background-color: #090909;
+    padding: 3% 3% 0 3%;
+    color: white;
+}
+footer > div:nth-of-type(1) {
+    margin-bottom: 5vh;
+}
+ul {
+    list-style: none;
+}
+
+footer > div:nth-of-type(1)  img {
+    width: 100px;
+    margin-bottom: 2vh;
+
+}
+footer > div:nth-of-type(1) >div:nth-of-type(1){
+    grid-column: 1 / -1;
+    padding: 0;
+}
+footer > div:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    margin-bottom: 2vh;
+}
+footer > div:nth-of-type(1) > div  {
+    padding: 0 5% 10% 5%;
+}
+footer div:nth-of-type(1) h3{
+    margin-bottom: 2vh;
+}
+
+
+footer >div:nth-of-type(2) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+footer >div:nth-of-type(2) img{
+    width: 150px;
+}
+footer >div:nth-of-type(2) div {
+    margin: 20px;
+}
+footer >div:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(1){
+    display: flex;
+    justify-content: space-around;
+}
+footer >div:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(1) i {
+    font-size: 25px;
+}
+footer>div:nth-of-type(2)>div:nth-of-type(1){
+    border: 1px solid #ffffff9f;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 250px;
+}
+footer>div:nth-of-type(2)>div:nth-of-type(1):has(input:focus),
+footer>div:nth-of-type(2)>div:nth-of-type(1):has(input:active),
+footer>div:nth-of-type(2)>div:nth-of-type(1):hover{
+    border: 1px solid white;
+}
+footer div:nth-of-type(2) input,
+footer div:nth-of-type(2) button{
+    font-size: 1rem;
+    color: white;
+    background: none;
+    border: none;
+}
+footer div:nth-of-type(2) input{
+    width: 90%;
+}
+
+footer div:nth-of-type(2) input:active,
+footer div:nth-of-type(2) input:focus{
+    outline: none;
+}
+
+footer>div:nth-of-type(2) a:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+footer>div:nth-of-type(3){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 5vh 0;
+}
+footer>div:nth-of-type(3) i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+footer>div:nth-of-type(3) div:nth-of-type(2) a{
+    margin-right: 20px;
+}
+footer>div:nth-of-type(3) span {
+    color: #ffffffa1;
+}
+@media screen and (min-width: 800px) {
+    header a {
+        display: block;
+    }
+    header button:nth-of-type(2) {
+        display: none;
+    
+    }
+    footer div:nth-of-type(2)>div:nth-of-type(7){
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    section:nth-of-type(2) > div:first-of-type,
+    section:nth-of-type(3) > div:first-of-type,
+    section:nth-of-type(4) > div:first-of-type{
+        width: 45%;
+        margin-left: 10%;
+    }
+    section:not(:first-of-type) > div:first-of-type div:not(:first-of-type){
+        width: 45%;
+    }
+    section:not(:first-of-type) blockquote {
+        margin-top: 5vh;
+    }
+
+    /* sell anywhere media */
+    section:nth-of-type(2) blockquote > img {
+    right: -37px;
+    top: -320px;
+    width: 470px;
+    }
+
+    /* Grow faster media */
+    section:nth-of-type(3) > div:first-of-type{
+        margin-left: auto;
+    }
+    section:nth-of-type(3) blockquote > img {
+        left: -40px;
+        top: -380px;
+        width: 470px;
+    }
+
+    /* Manage simply  */
+    section:nth-of-type(4) blockquote > img {
+    right: 0px;
+    top: -395px;
+    width: 470px;
+    }
+
+
+/* Sell around the world */
+    section:nth-of-type(5) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    }
+    section:nth-of-type(5) div:nth-of-type(1) {
+    width: 70%;
+    }
+    section:nth-of-type(5) div:nth-of-type(2) {
+        width: 30%;
+    }
+
+/* features */
+    section:nth-of-type(6) {
+        flex-direction: row;
+    }
+    section:nth-of-type(6) > div {
+        width: 33.33%;
+    }
+
+
+
+/* online store */
+    section:nth-of-type(7) {
+    flex-direction: row;
+    text-align: start;
+    }
+    section:nth-of-type(7) div {
+        width: 50%;
+    }
+
+    /* Footer */
+
+    footer > div:nth-of-type(1)  div:nth-of-type(1){
+        grid-column: 1 / 2;
+        grid-row: 1 / span 999;
+        align-self: start;
+    }
+    footer > div:nth-of-type(1)  div:nth-of-type(8){
+        grid-column: span 2;
+        padding: 0 10% 5% 2.5%;
+    }
+    
+
+
+    footer>div:nth-of-type(3){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+}
